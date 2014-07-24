@@ -53,11 +53,20 @@ WORKDIR /source/framework
 
 RUN make
 
-RUN make app PROJECT=richercart
+RUN apt-get install -y vim openssh-server
 
-#Add supervisord configuration file
+
+RUN mkdir /var/run/sshd
+
+RUN echo 'root:boss123' |chpasswd
+
+
+
+RUN make app PROJECT=richercart
 
 WORKDIR /source/richercart/
 
-EXPOSE 8001 
+EXPOSE 8001 22
 
+CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/source/richercart/init-dev.sh"]
