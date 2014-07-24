@@ -15,6 +15,10 @@ This Dockerfile created for "**Creating a Web App in Erlang with Chicago Boss an
 
 http://blog.drlinux.org
 
+You may also pull Chicago Boss docker image via docker.io following command:
+
+	$ sudo docker pull drlinux/chicagoboss
+
 ##Todo
 
 Implementing [supervisord](http://supervisord.org) or something like that.
