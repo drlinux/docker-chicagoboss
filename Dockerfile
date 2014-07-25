@@ -89,7 +89,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 8001
 
-VOLUME ["/source/chericart","~/development/chericart"]
 
 CMD ["/source/chericart/init-dev.sh"]
 
