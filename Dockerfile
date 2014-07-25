@@ -1,4 +1,5 @@
 FROM ubuntu:14.10
+
 MAINTAINER Ibrahim Yılmaz (a.k.a dr.linux) <ibrahim@drlinux.org>
 
 # Update Base System
@@ -10,6 +11,8 @@ RUN apt-get -y upgrade
 
 ENV HOME /root
 
+RUN echo 'root:boss123' |chpasswd
+
 #SET
 # Set Language Environment
 
@@ -19,6 +22,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 RUN dpkg-reconfigure locales
+ENV DEBIAN_FRONTEND noninteractive
 
 # Install Basic Packages
 
@@ -53,19 +57,9 @@ WORKDIR /source/framework
 
 RUN make
 
-RUN apt-get install -y vim openssh-server
-
-
-RUN mkdir /var/run/sshd
-
-RUN echo 'root:boss123' |chpasswd
-
-
-
 RUN make app PROJECT=richercart
 
 WORKDIR /source/richercart/src/controller
-
 
 RUN wget https://gist.githubusercontent.com/drlinux/5bacb19fac16a579ae15/raw/9940cb384964bb078efad7f0acf50125c102181e/richercart_world_controller.erl 
 
@@ -92,8 +86,11 @@ WORKDIR /source/richercart/
 RUN make
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-EXPOSE 22 8001
 
-CMD ["/usr/sbin/sshd", "-D"]
+EXPOSE 8001
+
+VOLUME ["/source/richercart","~/development/richercart"]
+
 CMD ["/source/richercart/init-dev.sh"]
+
 
