@@ -11,9 +11,12 @@ RUN apt-get -y upgrade
 
 ENV HOME /root
 
+<<<<<<< HEAD
 RUN echo 'root:boss123' |chpasswd
 
 #SET
+=======
+>>>>>>> 799551a4f51f214d4e7bcd42d50b2419a9c9e650
 # Set Language Environment
 
 RUN apt-get install -y language-pack-en
@@ -57,6 +60,18 @@ WORKDIR /source/framework
 
 RUN make
 
+<<<<<<< HEAD
+=======
+RUN apt-get install -y vim openssh-server
+
+
+RUN mkdir /var/run/sshd
+
+RUN echo 'root:boss123' | chpasswd
+
+
+
+>>>>>>> 799551a4f51f214d4e7bcd42d50b2419a9c9e650
 RUN make app PROJECT=richercart
 
 WORKDIR /source/richercart/src/controller
