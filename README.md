@@ -7,7 +7,7 @@ Dockerfile for creating Chicago Boss framework container. Build and run scripts 
 	$ sudo ./run.sh
 
 
-The Dockerfile creating a CB project which named as "richercart". 
+The Dockerfile creating a CB project which named as "chericart". 
 
 Please refer to run.sh file an Docker file more information.
 
