@@ -21,6 +21,8 @@ ssh pass : boss123
 You may also pull Chicago Boss docker image via docker.io following command:
 
 	$ sudo docker pull drlinux/chicagoboss
+	
+Please contribute, fork and pull requests!
 
 ##Todo
 
