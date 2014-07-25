@@ -64,9 +64,36 @@ RUN echo 'root:boss123' |chpasswd
 
 RUN make app PROJECT=richercart
 
+WORKDIR /source/richercart/src/controller
+
+
+RUN wget https://gist.githubusercontent.com/drlinux/5bacb19fac16a579ae15/raw/9940cb384964bb078efad7f0acf50125c102181e/richercart_world_controller.erl 
+
+WORKDIR /source/richercart/priv/static
+
+RUN wget https://gist.githubusercontent.com/drlinux/eef860ddc8f6065d31a4/raw/3ea14d46380b5a5629da2940502e494be0270c55/style.css
+
+RUN wget https://www.dropbox.com/s/xveyzwcgqtenl6b/logo.png?dl=1 -O logo.png
+
+WORKDIR /source/richercart/priv/
+
+RUN rm richercart.routes
+
+RUN wget https://gist.githubusercontent.com/drlinux/a5cb8f907df243d82a42/raw/5379078e0ab12e7b04a4b5e86f2eb140f5f321b4/richercart.routes
+
+RUN mkdir -p /source/richercart/src/view/world 
+
+WORKDIR /source/richercart/src/view/world
+
+RUN wget https://gist.githubusercontent.com/drlinux/9be5ec9069a003c297b0/raw/e04d1207df20852a73d57f64e38e96fd88e5c21f/hello.html
+
 WORKDIR /source/richercart/
 
-EXPOSE 8001 22
+RUN make
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+EXPOSE 22 8001
 
 CMD ["/usr/sbin/sshd", "-D"]
 CMD ["/source/richercart/init-dev.sh"]
+
