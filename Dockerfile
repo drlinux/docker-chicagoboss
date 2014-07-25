@@ -10,7 +10,6 @@ RUN apt-get -y upgrade
 
 ENV HOME /root
 
-#SET
 # Set Language Environment
 
 RUN apt-get install -y language-pack-en
@@ -58,7 +57,7 @@ RUN apt-get install -y vim openssh-server
 
 RUN mkdir /var/run/sshd
 
-RUN echo 'root:boss123' |chpasswd
+RUN echo 'root:boss123' | chpasswd
 
 
 
