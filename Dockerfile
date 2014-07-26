@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM phusion/baseimage:0.9.12
 
 MAINTAINER Ibrahim Yılmaz (a.k.a dr.linux) <ibrahim@drlinux.org>
 
@@ -87,9 +87,16 @@ RUN make
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+
+RUN  /etc/my_init.d/00_regen_ssh_host_keys.sh
+
+RUN /usr/sbin/enable_insecure_key
+
+RUN mkdir /etc/service/chicagoboss
+
+ADD chicagoboss.sh /etc/service/chicagoboss/run
+
 EXPOSE 8001
 
-
-CMD ["/source/chericart/init-dev.sh"]
-
-
+#CMD ["/source/chericart/init-dev.sh"]
+CMD ["/sbin/my_init"]
