@@ -98,5 +98,4 @@ ADD chicagoboss.sh /etc/service/chicagoboss/run
 
 EXPOSE 8001
 
-#CMD ["/source/chericart/init-dev.sh"]
 CMD ["/sbin/my_init"]
