@@ -15,8 +15,11 @@ This Dockerfile created for "**Creating a Web App in Erlang with Chicago Boss an
 
 http://blog.drlinux.org
 
-ssh user : root
-ssh pass : boss123
+You may use ssh-login script for drop in to container via ssh: 
+
+	$ sudo ./ssh-login.sh
+	
+That's all, you do not need anything else.
 
 You may also pull Chicago Boss docker image via docker.io following command:
 
@@ -26,9 +29,8 @@ Please contribute, fork and pull requests!
 
 ##Todo
 
-Implementing [supervisord](http://supervisord.org) or something like that.
+- Working with volumes (see [issue #2](https://github.com/drlinux/docker-chicagoboss/issues/2))
 
 
-
-
+~~- Implementing [supervisord](http://supervisord.org) or something like that.~~ (see [issue #1](https://github.com/drlinux/docker-chicagoboss/issues/1))
 
