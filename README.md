@@ -9,7 +9,7 @@ Dockerfile for creating Chicago Boss framework container. Build and run scripts 
 
 The Dockerfile creating a CB project which named as "chericart". 
 
-Please refer to run.sh file an Docker file more information.
+Please refer to run.sh file and Docker file more information.
 
 This Dockerfile created for "**Creating a Web App in Erlang with Chicago Boss and Riak from Scratch**" article series that will be published soon in my blog:
 
