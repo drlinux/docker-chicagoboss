@@ -29,7 +29,7 @@ Please contribute, fork and pull requests!
 
 ##Todo
 
-~~- Enable to working with volumes / shared directories (see [issue #2](https://github.com/drlinux/docker-chicagoboss/issues/2))
+~~- Enable to working with volumes / shared directories~~ (see [issue #2](https://github.com/drlinux/docker-chicagoboss/issues/2))
 
 
 ~~- Implementing [supervisord](http://supervisord.org) or something like that.~~ (see [issue #1](https://github.com/drlinux/docker-chicagoboss/issues/1))
