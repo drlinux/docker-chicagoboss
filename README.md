@@ -26,7 +26,7 @@ Please contribute, fork and pull requests!
 
 ##Todo
 
-Implementing [supervisord](http://supervisord.org) or something like that.
+<s>Implementing [supervisord](http://supervisord.org) or something like that.</s>
 
 
 
