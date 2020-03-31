@@ -27,12 +27,3 @@ Please contribute, fork and pull requests!
 ##Todo
 
 <s>Implementing [supervisord](http://supervisord.org) or something like that.</s>
-
-
-
-
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/drlinux/docker-chicagoboss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
