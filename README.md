@@ -36,7 +36,3 @@ Please contribute, fork and pull requests!
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/drlinux/docker-chicagoboss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/drlinux/docker-chicagoboss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
